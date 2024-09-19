@@ -1,0 +1,16 @@
+version: '3.9'
+services:
+  db:
+    image: postgres
+    restart: always
+    container_name: db
+    ports:
+      - 5432:5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data 
+    environment:
+      - POSTGRES_PASSWORD=node_api_password
+      - POSTGRES_USER=node_api
+      - POSTGRES_DB=todo
+volumes:
+  pgdata:
