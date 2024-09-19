@@ -1,19 +1,20 @@
 {
+  "extends": "@tsconfig/node18",
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "CommonJS",
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": false,
+    "outDir": "dist",
     "baseUrl": ".",
     "paths": {
       "@config/*": ["src/config/*"]
     },
-    "moduleResolution": "Node",
-    "outDir": "dist",
-    "importsNotUsedAsValues": "remove",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noUnusedParameters": true
   },
-  "include": ["src/*"],
-  "exclude": ["node_modules"]
+
+  "include": ["src/**/*"],
+  "exclude": ["/node_modules"]
 }
