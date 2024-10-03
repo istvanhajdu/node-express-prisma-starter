@@ -10,6 +10,8 @@ const env = cleanEnv(process.env, {
   }),
   HOST: host({ devDefault: "localhost" }),
   PORT: port({ devDefault: 5000 }),
+  RATE_LIMIT: port({ devDefault: 20 }),
+  RATE_WINDOW_MS: port({ devDefault: 5 }),
 });
 
 export default env;
