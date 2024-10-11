@@ -8,7 +8,10 @@
     "outDir": "dist",
     "baseUrl": ".",
     "paths": {
-      "@config/*": ["src/config/*"]
+      "@config/*": ["src/config/*"],
+      "@controller/*": ["src/controller/*"],
+      "@service/*": ["src/service/*"],
+      "@router/*": ["src/router/*"]
     },
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,

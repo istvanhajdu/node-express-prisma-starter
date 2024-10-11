@@ -5,6 +5,8 @@ import pino from 'pino';
 import env from '@config/env';
 import { rateLimit } from 'express-rate-limit';
 
+import router from '@router/index';
+
 const logger = pino({ name: 'server start' });
 
 const app: Application = express();
@@ -27,5 +29,7 @@ app.use(compression());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(rateLimiter);
+
+app.use('/api', router());
 
 export { app, logger };
